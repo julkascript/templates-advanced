@@ -1,0 +1,1 @@
+A Django mini-project for CRUD operations and template inheritance. 
