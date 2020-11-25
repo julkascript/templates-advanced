@@ -11,9 +11,3 @@ class PythonCreateForm(forms.ModelForm):
             'image': forms.TextInput(attrs={'class': 'form-control'}),
         }
         fields = '__all__'
-
-
-class ImageForm(forms.ModelForm):
-    class Meta:
-        model = Image
-        fields = "__all__"

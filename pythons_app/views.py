@@ -11,11 +11,13 @@ def index(req):
 def create(req):
     if req.method == 'GET':
         form = PythonCreateForm()
-        return render(req, 'create.html', {'form': form})
+        forms = {
+            'normalform': form,
+        }
+        return render(req, 'create.html', forms)
     else:
         data = req.POST
         form = PythonCreateForm(data)
-        print(form)
         if form.is_valid():
             python = form.save()
             python.save()

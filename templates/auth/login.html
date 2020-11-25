@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+    <h1 class="text-center">Login</h1>
+    <div class="row d-flex justify-content-center">
+        <form method="POST" action="{% url 'login user' %}">
+            {% csrf_token %}
+            {% bootstrap_form login_form %}
+            {% buttons %}
+                <button class="btn btn-primary">Login</button>
+            {% endbuttons %}
+        </form>
+    </div>
+{% endblock %}
